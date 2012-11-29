@@ -36,10 +36,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.15.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -168,7 +173,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MiscellaneousShopEntity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MiscellaneousShopEntity.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ProductModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -274,6 +285,17 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Products\01.jpg" />
+    <Content Include="Images\Products\02.jpg" />
+    <Content Include="Images\Products\03.jpg" />
+    <Content Include="Images\Products\04.jpg" />
+    <Content Include="Images\Products\05.jpg" />
+    <Content Include="Images\Products\06.jpg" />
+    <Content Include="Images\Products\07.jpg" />
+    <Content Include="Images\Products\08.jpg" />
+    <Content Include="Images\Products\09.jpg" />
+    <Content Include="Images\Products\10.jpg" />
+    <Content Include="Images\Products\10_l.jpg" />
     <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -330,7 +352,10 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <EntityDeploy Include="MiscellaneousShopEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MiscellaneousShopEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -339,7 +364,13 @@
     <Content Include="Views\Shared\_MasterPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Products\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Views\Products\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_CategoryPartial.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -368,6 +399,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

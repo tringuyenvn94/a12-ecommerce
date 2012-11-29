@@ -321,6 +321,7 @@ h6 {
 #sidebar .sidebar_list li a:hover { 
 	color: #fff; 
 	text-decoration: none; 
+	
 }
 
 .bs_box { clear: both; margin-bottom: 20px }
@@ -331,9 +332,12 @@ h6 {
 
 .product_box {
 	float: left;
-	width: 220px;
+	width: 215px;
 	text-align: center;
 	margin: 0 10px 30px 0;
+	-moz-box-shadow: 5px 5px rgb(0,0,0);
+    -webkit-box-shadow: 5px 5px rgb(0,0,0);
+    box-shadow: 5px 5px rgb(0,0,0);
 }
 
 .product_box img {
@@ -356,7 +360,7 @@ h6 {
 .product_box .add_to_card {
 	float: left;
 	display: block;
-	width: 140px;
+	width: 130px;
 	height: 28px;
 	line-height: 28px;	
 	text-align: center;
@@ -367,7 +371,7 @@ h6 {
 .product_box .detail {
 	float: left;
 	display: block;
-	width: 80px;
+	width: 85px;
 	height: 28px;
 	line-height: 28px;
 	text-align: center;	
