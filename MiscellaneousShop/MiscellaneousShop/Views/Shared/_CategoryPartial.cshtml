@@ -1,0 +1,15 @@
+﻿@model IList<MiscellaneousShop.Models.CategoryModel>
+@{var temp = Model.Last();}
+<div class="content"> 
+    <ul class="sidebar_list">
+        <li class="first"><a href="/Products/Index?catId=@Model.First().CategoryId">@Model.First().CategoryName</a></li> 
+        @{Model.RemoveAt(0);}
+        @{Model.RemoveAt(@Model.Count - 1);}
+
+        @foreach (var item in @Model)
+        {
+            <li><a href="/Products/Index?catId=@item.CategoryId">@item.CategoryName</a></li>
+        }
+        <li class="last"><a href="/Products/Index?catId=@temp.CategoryId">@temp.CategoryName</a></li>
+    </ul>
+</div>
