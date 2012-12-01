@@ -69,7 +69,11 @@
         </div>
         
         <div id="header_right">
-	        <a href="#">My Account</a> | <a href="#">My Wishlist</a> | <a href="#">My Cart</a> | <a href="#">Checkout</a> | <a href="#">Log In</a>
+	        <a href="#">My Account</a> | <a href="#">My Wishlist</a> | <a href="#">My Cart</a> | <a href="#">Checkout</a> |
+                    <div id="login">
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                
         </div>
         
         <div class="cleaner"></div>
@@ -97,7 +101,9 @@
                 </li>
                 <li><a href="#">FAQs</a></li>
                 <li><a href="#">Checkout</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Contact</a></li>                
+                <li>@Html.ActionLink("Login", "LogIn", "Account")</li>
+                
             </ul>
             <br style="clear: left" />
         </div> <!-- end of ddsmoothmenu -->
